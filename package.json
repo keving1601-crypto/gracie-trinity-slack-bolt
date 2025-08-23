@@ -1,0 +1,18 @@
+{
+  "name": "gracie-trinity-slack-bot",
+  "version": "1.0.0",
+  "description": "A Slack bot powered by Bolt and OpenAI",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "test-openai": "node test-openai.mjs"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^3.17.0",
+    "dotenv": "^16.0.3",
+    "openai": "^4.0.0"
+  }
+}
