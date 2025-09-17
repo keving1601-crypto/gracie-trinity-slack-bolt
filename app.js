@@ -16,6 +16,17 @@ const app = new App({
   socketMode: true,
 });
 
+import express from 'express';
+
+const web = express();
+web.get('/', (_req, res) => res.status(200).send('ok'));
+web.get('/health', (_req, res) => res.status(200).send('ok'));
+
+const PORT = process.env.PORT || 3000;
+web.listen(PORT, () => {
+console.log(`HTTP keepalive server running on ${PORT}`);
+});
+
 // ── OpenAI client
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
